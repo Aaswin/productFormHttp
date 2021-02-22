@@ -1,0 +1,26 @@
+<app-headev></app-headev>
+    <div class="container">
+        <div class='row'>
+            <div class="col-lg-3">
+                <div class="list-group">
+                    <ul>
+                        <li>
+                            <a routerLink='/dashboard'>Dashboard</a>
+                        </li>
+                        <li>
+                            <a routerLink='/productlist'>ProductList</a>
+                        </li>
+                        <li>
+                            <a routerLink='/userlist'>userList</a>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="list-group">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+</div>

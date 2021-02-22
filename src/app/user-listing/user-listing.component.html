@@ -1,0 +1,11 @@
+<div class="album py-5 bg-light">
+    <div class="container">
+        <h5>User List</h5>
+        <button routerLink="/create-user"  class="btn btn-primary">create</button>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class='col' *ngFor="let user of userListing">
+                <app-user-card [userData]="user"></app-user-card>
+            </div>
+        </div>
+    </div>
+</div>

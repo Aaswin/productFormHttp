@@ -1,0 +1,14 @@
+<div class="album py-5 bg-light">
+    <div class="container">
+        <h5>Product list</h5>
+        <button routerLink="/create-product"  class="btn btn-primary">create</button>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class='col' *ngFor="let product of dataListing">
+                <app-product-card [productData]="product"></app-product-card>
+
+            </div>
+            
+            
+        </div>
+    </div>
+</div>

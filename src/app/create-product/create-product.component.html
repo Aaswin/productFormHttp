@@ -1,0 +1,41 @@
+<div class="container">
+    <form [formGroup]="productFormGroup" (ngSubmit)="submitForm()">
+        <h1>create product form</h1>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="">Product Name</label>
+                    <input type="text" formControlName="name" class="form-control">
+                    <span style="color:red;" *ngIf="productFormGroup.get('name').touched && !productFormGroup.get('name').valid" >required field</span>
+                    <span style="color:red;" *ngIf="productFormGroup.get('name').errors?.minlength && !productFormGroup.get('name').valid" >please enter more than 5</span>
+                    <span style="color:red;" *ngIf="productFormGroup.get('name').errors?.maxlength && !productFormGroup.get('name').valid" >please enter less than 50</span>
+                
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="">Price</label>
+                    <input type="text" formControlName="price" class="form-control">
+                    <span style="color:red;" *ngIf="!productFormGroup.get('price').valid && productFormGroup.get('price').touched">required</span>
+                </div>
+            </div>
+        </div>    
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="">Description</label>
+                    <textarea class="form-control" formControlName="description" cols="30" rows="10" ></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <button [disabled]="!productFormGroup.valid" class="btn btn-primary"> create </button>
+            </div>
+        </div>  
+    </form> 
+    
+         
+    
+</div>
+console.log('hellow')
